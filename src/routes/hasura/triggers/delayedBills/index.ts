@@ -1,7 +1,8 @@
 import { startOfToday } from 'date-fns';
 import { Request, Response } from 'express';
 import { gql } from 'graphql-request';
-import client from 'src/graphql/client';
+
+import client from '../../../../graphql/client';
 
 const SetDelayedBills = gql`
   mutation SetDelayedBills($today: date) {

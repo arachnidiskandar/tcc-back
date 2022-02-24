@@ -1,9 +1,9 @@
 import { differenceInMonths, addMonths, setYear, getYear, startOfDay, endOfDay, parseISO } from 'date-fns';
 import { Request, Response } from 'express';
 import { gql } from 'graphql-request';
-import client from 'src/graphql/client';
-import { getDatesBetweenByMonth, getDatesBetweenByWeek } from 'src/helpers';
 
+import client from '../../../../graphql/client';
+import { getDatesBetweenByMonth, getDatesBetweenByWeek } from '../../../../helpers';
 import { BillRepeatType, IPaymentsList } from '../../actions/calculatePayments';
 
 interface IBillResponse {
