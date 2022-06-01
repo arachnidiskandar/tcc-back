@@ -39,6 +39,7 @@ const insertFutureBills = gql`
 `;
 
 export const createPaymentsList = (args: ICreatePaymentsArgs): IPaymentsList[] => {
+  console.log(args);
   const { dueDate, billId, billValue, userId, repeatType, repeatForever, repeatUpTo } = args;
 
   const dueDateValue = new Date(dueDate);
@@ -83,6 +84,7 @@ export const createPaymentsList = (args: ICreatePaymentsArgs): IPaymentsList[] =
 };
 
 const createPaymentsAction = async (req: Request, res: Response) => {
+  console.log(req);
   const params: ICreatePaymentsArgs = req.body.input;
   const variables = {
     objects: createPaymentsList(params),

@@ -4,3 +4,4 @@ yarn-error.log
 .env
 private.pem
 public.pem
+.log

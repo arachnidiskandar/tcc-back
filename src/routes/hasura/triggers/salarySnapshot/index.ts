@@ -29,7 +29,7 @@ const getUsersSalaries = gql`
 `;
 
 const insertSalarySnapshot = gql`
-  mutation CreateSalaryMonthSnapshot($objects: [salary_snapshot_insert_input!]!) {
+  mutation CreateSalaryMonthSnapshot($objects: [salarySnapshot_insert_input!]!) {
     insert_salarySnapshot(objects: $objects, on_conflict: { constraint: salary_snapshot_pkey }) {
       affected_rows
     }
